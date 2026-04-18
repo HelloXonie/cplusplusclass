@@ -18,8 +18,8 @@ int main() {
 	//Display results
 	cout << "Company Name: " << companyName << endl;
 	cout << "Hours worked: " << hours << endl;
-	cout << "Rate per hour: " << rate << endl;
-	cout << "Your " << companyName << " gross pay is: " << grossPay << " dollars." << endl;
+	cout << "Rate per hour: $" << rate << endl;
+	cout << "Your gross pay for " << companyName << " is: $" << grossPay << "." << endl;
 
 	return 0;
 }
