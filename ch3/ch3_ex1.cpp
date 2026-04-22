@@ -1,8 +1,8 @@
-/* Name: Xonie
+/*
+Name: Xonie
 Description: The purpose of this program is to take user inputs,
 store those values into variables then give an output
 based on calculations made with those inputs
-
 */
 
 #include <iostream>
