@@ -38,6 +38,7 @@ int main () {
 }
 
 /*
+ Part 4:
 1. What incorrect behaviour occurs?
 	 When entering 20 A and 3.7 the program just puts '0' for the GPA value.
 	 The program also just skips the next cin value and places something random in it.
@@ -45,4 +46,12 @@ int main () {
 	 'A' for GPA causes the first problem.
 3. At what point in the system does the failure happen?
 	 The failure happens when the user inputs anything other than whats expected to be stored as a value.
+
+--
+
+Part 5:
+What does this exercise show about how computers interpret user input?
+This shows that computers take input and interprets it exactly as it's asked to. It also shows if
+there is nothing to handle an error, unexpected results will occur. Also shows why design and testing is important.
+Once software reaches an end user you can't control every input.
 */
