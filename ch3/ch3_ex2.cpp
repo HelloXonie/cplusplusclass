@@ -36,3 +36,13 @@ int main () {
 
 	return 0;
 }
+
+/*
+1. What incorrect behaviour occurs?
+	 When entering 20 A and 3.7 the program just puts '0' for the GPA value.
+	 The program also just skips the next cin value and places something random in it.
+2. Which variable causes the problem?
+	 'A' for GPA causes the first problem.
+3. At what point in the system does the failure happen?
+	 The failure happens when the user inputs anything other than whats expected to be stored as a value.
+*/
