@@ -1,6 +1,7 @@
 /*
 Name: Xonie
-Description: Sum of 2 numbers
+Assignment Title: Programming challenges Chapter 2
+Problem Number: 1 - Sum of Two Numbers
 */
 
 #include <iostream>
