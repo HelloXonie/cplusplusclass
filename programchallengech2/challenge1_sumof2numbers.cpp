@@ -3,7 +3,6 @@ Name: Xonie
 Description: Sum of 2 numbers
 */
 
-
 #include <iostream>
 using namespace std;
 
