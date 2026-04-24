@@ -1,6 +1,6 @@
 /*
 Name: Xonie
-Team Name: PlusPlusUltra
+Team Name: PlusPlusUltra - Xonie Martin, Kyungjae Lee
 Assignment Title: Programming challenges Chapter 2
 Problem Number: 3 - Sales Tax
 */
