@@ -10,7 +10,15 @@ using namespace std;
 
 int main() {
 
-	//
+	// Declare variables
+	int gasTank = 20;
+	
 
+	// Calculate formula
+	
 
+	// Display output
+	cout << "Your gas tank size is: " << gasTank << endl;
+
+	return 0;
 }
