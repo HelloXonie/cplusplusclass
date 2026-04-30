@@ -13,10 +13,21 @@ using namespace std;
 
 int main() {
 
+	// Variables
+	double gasTankCapacity;
+	double fullTankMileage;
 
+	// Prompt the user for input
+	cout << "How many gallons can your gas tank hold?" << endl;
+	cin >> gasTankCapacity;
 
+	cout << "How many miles can be driven on a full tank?" << endl;
+	cin >> fullTankMileage;
 
+	// Calculation
+	double MPG = fullTankMileage / gasTankCapacity;
 
+	cout << "The amount of miles you can drive on a full tank are: " << MPG << endl;
 
-
+	return 0;
 }
