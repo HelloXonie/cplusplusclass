@@ -1,7 +1,7 @@
 /*
 Team Name: PlusPlusUltra
 Team member: Xonie Martin, Kyungjae Lee
-Name: Kyungaejae Lee
+Name: Xonie Martin
 Assignment number: Programming Challenges – Chapter 3
 Description: This program will write a program
 that asks the user to input how many cookies he or she actually ate and then reports
@@ -11,8 +11,7 @@ how many total calories were consumed.
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
 
 	// Variables
 	double oneServing = 10; // One serving is 10 cookies
@@ -30,5 +29,4 @@ int main()
 	// Display
 	cout << "\nYou consumed " << consumedCalories << " calories." << endl;
 	return 0;
-
 }
