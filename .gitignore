@@ -4,5 +4,5 @@
 !*.cpp
 !*.h
 !*.md
-../programchallengech3/quizproblem.cpp
-../test.cpp
+programchallengech3/quizproblem.cpp
+test.cpp
