@@ -16,5 +16,7 @@ int main() {
 	// Constants
 	const int REGULAR_HOURS = 40;
 
+	// Variables
+	
 	return 0;
 }
