@@ -104,4 +104,48 @@ int main() {
 
 /************** Sample Output **************
 
+Please tell me the name of your company: 
+Adobe          
+How many hours did you work?
+45
+How many hours can you work before it's considered overtime?
+40
+How much is your hourly rate?
+66.13
+What is the rate if you work overtime?
+1.5
+Enter a minimum number to randomize a doc numner
+1008
+Enter a maximum number to randomize a doc number
+2002
+Company name: Adobe
+Hours worked: 45
+Hourly rate: 66.13
+Document number: 1524
+Your Adobe gross pay is $3141.17 dollars.
 
+*********************************************
+
+Please tell me the name of your company: 
+bubbly
+How many hours did you work?
+48
+How many hours can you work before it's considered overtime?
+40
+How much is your hourly rate?
+0
+Please enter a valid amount hours
+98.99
+What is the rate if you work overtime?
+1.5
+Enter a minimum number to randomize a doc numner
+1000
+Enter a maximum number to randomize a doc number
+2001
+Company name: bubbly
+Hours worked: 48
+Hourly rate: 98.99
+Document number: 1757
+Your bubbly gross pay is $5147.48 dollars.
+
+*/
