@@ -30,17 +30,18 @@ int main() {
 	double grossPay;
 	double overtimeRate;
 
-	string companyName;
 	// Prompt the user for input
 	cout << "Please tell me the name of your company: " << endl;
 	getline(cin, companyName);
 
 	cout << "How many hours did you work?" << endl;
 	cin >> hoursWorked;
-	if (hoursWorked < 0) {
+
+	// Confirm the user isn't entering in negative hours.
+	if (hoursWorked < 1 ) { 
 		cout << "Please enter a valid amount hours" << endl;
 		cin >> hoursWorked;
-	} 
+	}
 
 	cout << "How many hours can you work before it's considered overtime?" << endl;
 	cin >> regularHours;
@@ -48,8 +49,35 @@ int main() {
 	cout << "How much is your hourly rate?" << endl;
 	cin >> hourlyRate;
 
+	// Confirm the user ins't entering a negative rate.
+	if (hourlyRate <= 1) { 
+		cout << "Please enter a valid amount hours" << endl;
+		cin >> hourlyRate;
+	}
+	
 	cout << "What is the rate if you work overtime?" << endl;
 	cin >> overtimeRate;
+	
+	//Confirm the overtime rate isn't the same as hourly
+	//overtime rate is a multiplier so 1.1, 1.5, 2 etc.
+	if (overtimeRate <= 1) {
+		cout << "Please enter a valid overtime Rate" << endl;
+		cin >> overtimeRate;
+	}
+
+	cout << "Enter a minimum number to randomize a doc numner" << endl;
+	cin >> min_doc;
+
+	cout << "Enter a maximum number to randomize a doc number" << endl;
+	cin >> max_doc;
+
+	if (min_doc >= max_doc) {
+		cout << "Your minimum number can be greater than or equal to your maximum. Please enter a new value" << endl;
+		cout << "minimum: " << endl;
+		cin >> min_doc;
+		cout << "maximum: " << endl;
+		cin >> max_doc;
+	}
 
 	// check for how many hours worked to calculate total gross pay
 	if (hoursWorked > regularHours) {
