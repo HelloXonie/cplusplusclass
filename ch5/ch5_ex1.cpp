@@ -1,6 +1,6 @@
 /*
 Name: Xonie
-Team Name: Plus Plus Ultra - Xonie Martin, Kyungjae Lee
+Date: May 17, 2026
 Description: The purpose of this program is to take user inputs,
 and calculate gross pay based on if they did overtime or regular
 hours. Focus for this will be to have cleaner code and error handling
@@ -38,7 +38,7 @@ int main() {
 	cin >> hoursWorked;
 
 	// Confirm the user isn't entering in negative hours.
-	if (hoursWorked < 1 ) { 
+	while (hoursWorked < 0 ) { 
 		cout << "Please enter a valid amount hours" << endl;
 		cin >> hoursWorked;
 	}
@@ -50,7 +50,7 @@ int main() {
 	cin >> hourlyRate;
 
 	// Confirm the user ins't entering a negative rate.
-	if (hourlyRate <= 1) { 
+	while (hourlyRate <= 0) { 
 		cout << "Please enter a valid amount hours" << endl;
 		cin >> hourlyRate;
 	}
@@ -71,7 +71,7 @@ int main() {
 	cout << "Enter a maximum number to randomize a doc number" << endl;
 	cin >> max_doc;
 
-	if (min_doc >= max_doc) {
+	while (min_doc >= max_doc) {
 		cout << "Your minimum number can be greater than or equal to your maximum. Please enter a new value" << endl;
 		cout << "minimum: " << endl;
 		cin >> min_doc;
@@ -102,3 +102,30 @@ int main() {
 	return 0;
 }
 
+/*
+Please tell me the name of your company: 
+Office Max
+How many hours did you work?
+50
+How many hours can you work before it's considered overtime?
+40
+How much is your hourly rate?
+-10
+Please enter a valid amount hours
+-5
+Please enter a valid amount hours
+0
+Please enter a valid amount hours
+87.50
+What is the rate if you work overtime?
+1.5
+Enter a minimum number to randomize a doc numner
+1100
+Enter a maximum number to randomize a doc number
+1500
+Company name: Office Max
+Hours worked: 50
+Hourly rate: 87.50
+Document number: 1341
+Your Office Max gross pay is $4812.50 dollars.
+*/
