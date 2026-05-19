@@ -1,0 +1,5 @@
+Company name: Acme
+Hours worked: 40
+Hourly rate: 15.00
+Document number: 1099
+Your Acme gross pay is $600.00 dollars.

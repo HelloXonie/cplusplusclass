@@ -50,7 +50,7 @@ int main() {
 
 	// Confirm the user ins't entering a negative rate.
 	while (hourlyRate <= 0) { 
-		cout << "Please enter a valid amount hours" << endl;
+		cout << "Please enter a valid rate" << endl;
 		cin >> hourlyRate;
 	}
 	
@@ -59,7 +59,7 @@ int main() {
 	
 	//Confirm the overtime rate isn't the same as hourly
 	//overtime rate is a multiplier so 1.1, 1.5, 2 etc.
-	if (overtimeRate <= 1) {
+	while (overtimeRate <= 1) {
 		cout << "Please enter a valid overtime Rate" << endl;
 		cin >> overtimeRate;
 	}
@@ -90,6 +90,18 @@ int main() {
 	srand(static_cast<unsigned int>(time(0))); // seed random number
 	docNumber = min_doc + rand() % (max_doc - min_doc + 1);
 
+	// Create a file for output
+	ofstream outfile("Pay_Statement.txt");
+
+	// Output to file
+	outfile << fixed << setprecision(2) << showpoint; // format pay output
+	outfile << "Company name: " << companyName << endl;
+	outfile << "Hours worked: " << hoursWorked << endl;
+	outfile << "Hourly rate: " << hourlyRate << endl;
+	outfile << "Document number: " << docNumber << endl;
+	outfile << "Your " << companyName << " gross pay is $" << grossPay << " dollars." << endl;
+	outfile.close();
+
 	// Display output
 	cout << fixed << setprecision(2) << showpoint; // format pay output
 	cout << "Company name: " << companyName << endl;
@@ -101,4 +113,24 @@ int main() {
 	return 0;
 }
 
-
+/*
+Please tell me the name of your company: 
+Acme
+How many hours did you work?
+40
+How many hours can you work before it's considered overtime?
+40
+How much is your hourly rate?
+15
+What is the rate if you work overtime?
+1.5
+Enter a minimum number to randomize a doc numner
+1001
+Enter a maximum number to randomize a doc number
+1800
+Company name: Acme
+Hours worked: 40
+Hourly rate: 15.00
+Document number: 1099
+Your Acme gross pay is $600.00 dollars.
+*/
