@@ -17,6 +17,40 @@ using namespace std;
 
 int main() {
 
+	// Constants
+	const double BURGER1 = 5.25;  // De Anza Burger
+	const double BURGER2 = 5.75;  // Bacon Cheese
+	const double BURGER3 = 5.95;  // Mushroom Swiss
+	const double BURGER4 = 5.95;  // Western Burger
+	const double BURGER5 = 5.95;  // Don Cali Burger
+	const double TAX_RATE = 0.09;
+
+	// Variables
+	int quantity1 = 0;
+	int quantity2 = 0;
+	int quantity3 = 0;
+	int quantity4 = 0;
+	int quantity5 = 0;
+
+	int choice;
+	int amount;
+	double subtotal = 0.0;
+	double tax = 0.0;
+	double total = 0.0;
+	string userType;
+
+	// Display the menu
+	cout << "1. De Anza Burger - $" << BURGER1 << endl;
+	cout << "2. Bacon Cheese - $" << BURGER2 << endl;
+	cout << "3. Mushroom Swiss - $" << BURGER3 << endl;
+	cout << "4. Western Burger - $" << BURGER4 << endl;
+	cout << "5. Don Cali Burger - $" << BURGER5 << endl;
+
+	// Prompt the User
+	cout << "Please choose a burger. Enter a number from 1 to 5: " << endl;
+
+	
+
 
 
 
