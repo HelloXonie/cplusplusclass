@@ -160,6 +160,7 @@ int main() {
 	outputFile << "Total: $" << total << endl;
 
 	outputFile.close();
+	return 0;
 }
 
 /************** Sample Output 1 *******************
