@@ -103,13 +103,13 @@ int main() {
 
 	// Prompt user if Student or staff
 	cout << "Are you a student or staff?" << endl;
-	get.line(cin, userType);
+	cin >> userType;
 
-	if (userType == student){
+	if (userType == "student"){
 		tax = 0;
 	}
 	else {
-		tax = subtotal * TAXRATE;
+		tax = subtotal * TAX_RATE;
 	}
 
 	total = subtotal + tax;
@@ -118,4 +118,61 @@ int main() {
 	cout << fixed << setprecision(2);
 	cout << "********** FINAL BILL **********" << endl;
 
+	if (quantity1 > 0) {
+		cout << "De Anza Burger x" << quantity1 << " - $" << quantity1 * BURGER1 << endl;
+	}
+	if (quantity2 > 0) {
+		cout << "Bacon Cheese x" << quantity2 << " - $" << quantity2 * BURGER2 << endl;
+	}
+	if (quantity3 > 0) {
+		cout << "Mushroom Swiss x" << quantity3 << " - $" << quantity3 * BURGER3 << endl;
+	}
+	if (quantity4 > 0) {
+		cout << "Western Burger x" << quantity4 << " - $" << quantity4 * BURGER4 << endl;
+	}
+	if (quantity5 > 0) {
+		cout << "Don Cali Burger x" << quantity5 << " - $" << quantity5 * BURGER5 << endl;
+	}
+	cout << "Subtotal: $" << subtotal << endl;
+	cout << "Tax: $" << tax << endl;
+	cout << "Total: $" << total << endl;
+
+	// Output to a file
+	cout << fixed << setprecision(2);
+	cout << "********** FINAL BILL **********" << endl;
+
+	if (quantity1 > 0) {
+		cout << "De Anza Burger x" << quantity1 << " - $" << quantity1 * BURGER1 << endl;
+	}
+	if (quantity2 > 0) {
+		cout << "Bacon Cheese x" << quantity2 << " - $" << quantity2 * BURGER2 << endl;
+	}
+	if (quantity3 > 0) {
+		cout << "Mushroom Swiss x" << quantity3 << " - $" << quantity3 * BURGER3 << endl;
+	}
+	if (quantity4 > 0) {
+		cout << "Western Burger x" << quantity4 << " - $" << quantity4 * BURGER4 << endl;
+	}
+	if (quantity5 > 0) {
+		cout << "Don Cali Burger x" << quantity5 << " - $" << quantity5 * BURGER5 << endl;
+	}
+	cout << "Subtotal: $" << subtotal << endl;
+	cout << "Tax: $" << tax << endl;
+	cout << "Total: $" << total << endl;
+
+
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
