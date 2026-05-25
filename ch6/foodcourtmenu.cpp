@@ -97,4 +97,25 @@ int main() {
 			cin >> choice;
 		}
 	}
+
+	// Calculations
+	subtotal = (quantity1 * BURGER1) + (quantity2 * BURGER2) + (quantity3 * BURGER3) + (quantity4 * BURGER4) + (quantity5 * BURGER5);
+
+	// Prompt user if Student or staff
+	cout << "Are you a student or staff?" << endl;
+	get.line(cin, userType);
+
+	if (userType == student){
+		tax = 0;
+	}
+	else {
+		tax = subtotal * TAXRATE;
+	}
+
+	total = subtotal + tax;
+
+	// Display output
+	cout << fixed << setprecision(2);
+	cout << "********** FINAL BILL **********" << endl;
+
 }
