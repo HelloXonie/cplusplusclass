@@ -47,14 +47,54 @@ int main() {
 	cout << "5. Don Cali Burger - $" << BURGER5 << endl;
 
 	// Prompt the User
-	cout << "Please choose a burger. Enter a number from 1 to 5: " << endl;
+	cout << "Select a burger. Enter a number from 1 to 5 or enter 6 when done: " << endl;
+	cin >> choice;
 
-	
+	// Ordering Logic
+	while (choice != 6) {
 
-
-
-
-
-
-
+		// How many of each burger
+		if(choice >= 1 && choice <=5) {
+			
+			if (choice == 1) {
+				cout << "How many would you like?" << endl;
+				cin >> amount;
+				quantity1 += amount;
+				cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: " << endl;
+				cin >> choice;
+			}
+			else if (choice == 2) {
+				cout << "How many would you like?" << endl;
+				cin >> amount;
+				quantity2+= amount;
+				cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: ";
+				cin >> choice;
+			}
+			else if (choice == 3) {
+				cout << "How many would you like?" << endl;
+				cin >> amount;
+				quantity3+= amount;
+				cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: ";
+				cin >> choice;
+			}
+			else if (choice == 4) {
+				cout << "How many would you like?" << endl;
+				cin >> amount;
+				quantity4+= amount;
+				cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: ";
+				cin >> choice;
+			}
+			else if (choice == 5) {
+				cout << "How many would you like?" << endl;
+				cin >> amount;
+				quantity5+= amount;
+				cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: ";
+				cin >> choice;
+			}
+		}
+		else {
+			cout << "Invalid choice. Please enter 1-6." << endl;
+			cin >> choice;
+		}
+	}
 }
