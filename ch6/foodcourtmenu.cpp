@@ -164,8 +164,28 @@ int main() {
 	outputFile.close();
 }
 
-/************** Sample Output *******************
+/************** Sample Output 1 *******************
 
+1. De Anza Burger - $5.25
+2. Bacon Cheese - $5.75
+3. Mushroom Swiss - $5.95
+4. Western Burger - $5.95
+5. Don Cali Burger - $5.95
+Select a burger. Enter a number from 1 to 5 or enter 6 when done: 
+1
+How many would you like?
+2
+Anything else? Enter a number 1 to 5 or enter 6 when done: 
+6
+Are you a student or staff?
+student
+********** FINAL BILL **********
+De Anza Burger x2 - $10.50
+Subtotal: $10.50
+Tax: $0.00
+Total: $10.50
+
+**************** Sample Output 2 ******************
 1. De Anza Burger - $5.25
 2. Bacon Cheese - $5.75
 3. Mushroom Swiss - $5.95
