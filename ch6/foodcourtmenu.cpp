@@ -138,41 +138,58 @@ int main() {
 	cout << "Total: $" << total << endl;
 
 	// Output to a file
-	cout << fixed << setprecision(2);
-	cout << "********** FINAL BILL **********" << endl;
+	ofstream outputFile("output.txt");
+	outputFile << fixed << setprecision(2);
+	outputFile << "********** FINAL BILL **********" << endl;
 
 	if (quantity1 > 0) {
-		cout << "De Anza Burger x" << quantity1 << " - $" << quantity1 * BURGER1 << endl;
+		outputFile << "De Anza Burger x" << quantity1 << " - $" << quantity1 * BURGER1 << endl;
 	}
 	if (quantity2 > 0) {
-		cout << "Bacon Cheese x" << quantity2 << " - $" << quantity2 * BURGER2 << endl;
+		outputFile << "Bacon Cheese x" << quantity2 << " - $" << quantity2 * BURGER2 << endl;
 	}
 	if (quantity3 > 0) {
-		cout << "Mushroom Swiss x" << quantity3 << " - $" << quantity3 * BURGER3 << endl;
+		outputFile << "Mushroom Swiss x" << quantity3 << " - $" << quantity3 * BURGER3 << endl;
 	}
 	if (quantity4 > 0) {
-		cout << "Western Burger x" << quantity4 << " - $" << quantity4 * BURGER4 << endl;
+		outputFile << "Western Burger x" << quantity4 << " - $" << quantity4 * BURGER4 << endl;
 	}
 	if (quantity5 > 0) {
-		cout << "Don Cali Burger x" << quantity5 << " - $" << quantity5 * BURGER5 << endl;
+		outputFile << "Don Cali Burger x" << quantity5 << " - $" << quantity5 * BURGER5 << endl;
 	}
-	cout << "Subtotal: $" << subtotal << endl;
-	cout << "Tax: $" << tax << endl;
-	cout << "Total: $" << total << endl;
+	outputFile << "Subtotal: $" << subtotal << endl;
+	outputFile << "Tax: $" << tax << endl;
+	outputFile << "Total: $" << total << endl;
 
-
-	
-	
+	outputFile.close();
 }
 
+/************** Sample Output *******************
 
-
-
-
-
-
-
-
-
-
-
+1. De Anza Burger - $5.25
+2. Bacon Cheese - $5.75
+3. Mushroom Swiss - $5.95
+4. Western Burger - $5.95
+5. Don Cali Burger - $5.95
+Select a burger. Enter a number from 1 to 5 or enter 6 when done: 
+1
+How many would you like?
+2
+Anything else? Enter a number 1 to 5 or enter 6 when done: 
+3
+How many would you like?
+1
+Anything else? Enter a number 1 to 5 or enter 6 when done: 5
+How many would you like?
+3
+Anything else? Enter a number 1 to 5 or enter 6 when done: 6
+Are you a student or staff?
+staff
+********** FINAL BILL **********
+De Anza Burger x2 - $10.50
+Mushroom Swiss x1 - $5.95
+Don Cali Burger x3 - $17.85
+Subtotal: $34.30
+Tax: $3.09
+Total: $37.39
+*/
