@@ -8,9 +8,7 @@ The program will handle calculation and output a final bill to a separate file.
 
 #include <iostream>
 #include <iomanip>
-#include <cstdlib>
 #include <string>
-#include <ctime>
 #include <fstream>
 
 using namespace std;
