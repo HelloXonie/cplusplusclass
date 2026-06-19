@@ -141,3 +141,25 @@ int binarySearch(int arr[], int size, int target) {
     }
     return -1;
 }
+
+
+/***************** Sample Output ********************
+
+How many elements in the array? 3
+Enter value #1: 2
+Enter value #2: 5
+Enter value #3: 6
+Unsorted array: 2 5 6
+Choose sort method:
+1. Selection Sort
+2. Bubble Sort
+> 1
+Sorted array: 2 5 6
+Enter a value to search for: 5
+Choose search method:
+1. Linear Search
+2. Binary Search
+> 1
+Value found at index 1
+
+*/
