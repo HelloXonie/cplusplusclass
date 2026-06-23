@@ -100,7 +100,7 @@ void calculate() {
 
 void printBill() {
 
-  cout << fixed << setprecision(2);
+	cout << fixed << setprecision(2);
 	cout << "********** FINAL BILL **********" << endl;
 	for (int i = 0; i < 5; i++) {
 		if (orderArray[i] > 0) {
@@ -115,7 +115,7 @@ void printBill() {
 // Output to a file
 void saveBillToFile() {
 
-  int randNum = rand() % 1001 + 1000;
+	int randNum = rand() % 1001 + 1000;
 	string fileName = to_string(randNum) + ".txt";
 	ofstream outputFile(fileName);
 	outputFile << fixed << setprecision(2);
@@ -132,3 +132,61 @@ void saveBillToFile() {
 	outputFile.close();
 	cout << "Your bill has been saved to " << fileName << endl;
 }
+
+/*
+
+**************** SAMPLE OUTPUT *****************
+
+1. De Anza Burger - $5.25
+2. Bacon Cheese - $5.75
+3. Mushroom Swiss - $5.95
+4. Western Burger - $5.95
+5. Don Cali Burger - $5.95
+Select a burger. Enter a number from 1 to 5 or enter 6 when done: 
+1
+How many would you like?
+2
+Anything else? Enter a number 1 to 5 or enter 6 when done: 
+6
+Are you a student or staff?
+student
+********** FINAL BILL **********
+De Anza Burger x2 - $10.50
+Subtotal: $10.50
+Tax: $0.00
+Total: $10.50
+Your bill has been saved to 1240.txt
+
+*************************************************
+
+1. De Anza Burger - $5.25
+2. Bacon Cheese - $5.75
+3. Mushroom Swiss - $5.95
+4. Western Burger - $5.95
+5. Don Cali Burger - $5.95
+Select a burger. Enter a number from 1 to 5 or enter 6 when done: 
+1
+How many would you like?
+2
+Anything else? Enter a number 1 to 5 or enter 6 when done: 
+3
+How many would you like?
+1
+Anything else? Enter a number 1 to 5 or enter 6 when done: 
+5
+How many would you like?
+1
+Anything else? Enter a number 1 to 5 or enter 6 when done: 
+6
+Are you a student or staff?
+staff
+********** FINAL BILL **********
+De Anza Burger x2 - $10.50
+Mushroom Swiss x1 - $5.95
+Don Cali Burger x1 - $5.95
+Subtotal: $22.40
+Tax: $2.02
+Total: $24.42
+Your bill has been saved to 1725.txt
+
+*/
