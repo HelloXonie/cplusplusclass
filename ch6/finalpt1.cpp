@@ -1,7 +1,7 @@
 /*
 Name: Xonie Martin
 Team Name: Plus Plus Ultra - Xonie Martin, Kyungjae Lee
-Date: May 23, 2026
+Date: June 22, 2026
 Description: The purpose of this program is to build a menu, and take user inputs for an order.
 The program will handle calculation and output a final bill to a separate file.
 */
@@ -54,21 +54,43 @@ void displayMenu() {
 
 void getInputs() {
 	
-	if (choice >= 1 && choice <= 5) {
-		cout << "How many would you like?" << endl;
-		cin >> amount;
-		orderArray[choice - 1] += amount;
-		cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: " << endl;
-		cin >> choice;
+	int choice;
+	int amount;
+
+	cout << "Select a burger. Enter a number from 1 to 5 or enter 6 when done: " << endl;
+	cin >> choice;
+
+	while (choice != 6) {
+
+		if (choice >= 1 && choice <= 5) {
+			cout << "How many would you like?" << endl;
+			cin >> amount;
+			orderArray[choice - 1] += amount;
+			cout << "Anything else? Enter a number 1 to 5 or enter 6 when done: " << endl;
+			cin >> choice;
+		}
+		else {
+			cout << "Invalid choice. Please enter 1-6." << endl;
+			cin >> choice;
+		}
 	}
+
+	cout << "Are you a student or staff?" << endl;
+	cin >> userType;
 }
 
 void calculate() {
 
-	// TODO: loop through orderArray and PRICE_ARRAY to build subtotal
-	// TODO: apply TAX_RATE if userType is not "student"
-	// TODO: set total = subtotal + tax
-
+	for (int i = 0; i < 5; i++) {
+			subtotal += orderArray[i] * PRICE_ARRAY[i];
+	}
+	if (userType == "student") {
+			tax = 0;
+	} 
+	else {
+			tax = subtotal * TAX_RATE;
+	}
+	total = subtotal + tax;
 }
 
 void printBill() {
