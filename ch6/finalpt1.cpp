@@ -45,6 +45,7 @@ int main() {
 	return 0;
 }
 
+// Show the user the menu
 void displayMenu() {
 
 	for (int i = 0; i < 5; i++) {
@@ -52,6 +53,7 @@ void displayMenu() {
 	}
 }
 
+// Prompt the user and get inputs
 void getInputs() {
 	
 	int choice;
@@ -79,31 +81,58 @@ void getInputs() {
 	cin >> userType;
 }
 
+// Calculations
 void calculate() {
 
 	for (int i = 0; i < 5; i++) {
-			subtotal += orderArray[i] * PRICE_ARRAY[i];
+		subtotal += orderArray[i] * PRICE_ARRAY[i];
 	}
 	if (userType == "student") {
-			tax = 0;
+		tax = 0;
 	} 
 	else {
-			tax = subtotal * TAX_RATE;
+		tax = subtotal * TAX_RATE;
 	}
 	total = subtotal + tax;
 }
 
 void printBill() {
 
-	// TODO: print the bill header
-	// TODO: loop through orderArray, print line items where orderArray[i] > 0
-	// TODO: print subtotal, tax, total
+	cout << fixed << setprecision(2);
 
+	cout << "You have ordered: " << endl;
+	for (int i = 0; i < 5; i++) {
+		if (orderArray[i] > 0) {
+			cout << orderArray[i] << " " << BURGER_ARRAY[i] << ": $" << orderArray[i] * PRICE_ARRAY[i] << endl;
+		}
+	}
+	cout << "Before tax is $" << subtotal << endl;
+	cout << "Tax amount is $" << tax << endl;
+	cout << "Total is $" << total << endl;
 }
 
+// Output to a file
 void saveBillToFile() {
 
-	// TODO: generate random number 1000-2000, build filename like "1845.txt"
-	// TODO: open ofstream, write same bill content as printBill(), close file
+	srand(time(0));
+	int randNum = rand() % 1001 + 1000;
+	string fileName = to_string(randNum) + ".txt";
+
+	ofstream outputFile(fileName);
+	outputFile << fixed << setprecision(2);
+
+	outputFile << "You have ordered: " << endl;
+	for (int i = 0; i < 5; i++) {
+		if (orderArray[i] > 0) {
+			outputFile << orderArray[i] << " " << BURGER_ARRAY[i] << ": $" << orderArray[i] * PRICE_ARRAY[i] << endl;
+		}
+	}
+	outputFile << "Before tax is $" << subtotal << endl;
+	outputFile << "Tax amount is $" << tax << endl;
+	outputFile << "Total is $" << total << endl;
+
+	outputFile.close();
+
+	cout << "Your bill has been saved to " << fileName << endl;
 
 }
