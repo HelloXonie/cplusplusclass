@@ -36,6 +36,8 @@ double total = 0.0;
 
 int main() {
 
+	srand(time(0));
+	
 	displayMenu();
 	getInputs();
 	calculate();
@@ -98,41 +100,35 @@ void calculate() {
 
 void printBill() {
 
-	cout << fixed << setprecision(2);
-
-	cout << "You have ordered: " << endl;
+  cout << fixed << setprecision(2);
+	cout << "********** FINAL BILL **********" << endl;
 	for (int i = 0; i < 5; i++) {
 		if (orderArray[i] > 0) {
-			cout << orderArray[i] << " " << BURGER_ARRAY[i] << ": $" << orderArray[i] * PRICE_ARRAY[i] << endl;
+			cout << BURGER_ARRAY[i] << " x" << orderArray[i] << " - $" << orderArray[i] * PRICE_ARRAY[i] << endl;
 		}
 	}
-	cout << "Before tax is $" << subtotal << endl;
-	cout << "Tax amount is $" << tax << endl;
-	cout << "Total is $" << total << endl;
+	cout << "Subtotal: $" << subtotal << endl;
+	cout << "Tax: $" << tax << endl;
+	cout << "Total: $" << total << endl;
 }
 
 // Output to a file
 void saveBillToFile() {
 
-	srand(time(0));
-	int randNum = rand() % 1001 + 1000;
+  int randNum = rand() % 1001 + 1000;
 	string fileName = to_string(randNum) + ".txt";
-
 	ofstream outputFile(fileName);
 	outputFile << fixed << setprecision(2);
+	outputFile << "********** FINAL BILL **********" << endl;
 
-	outputFile << "You have ordered: " << endl;
 	for (int i = 0; i < 5; i++) {
 		if (orderArray[i] > 0) {
-			outputFile << orderArray[i] << " " << BURGER_ARRAY[i] << ": $" << orderArray[i] * PRICE_ARRAY[i] << endl;
+			outputFile << BURGER_ARRAY[i] << " x" << orderArray[i] << " - $" << orderArray[i] * PRICE_ARRAY[i] << endl;
 		}
 	}
-	outputFile << "Before tax is $" << subtotal << endl;
-	outputFile << "Tax amount is $" << tax << endl;
-	outputFile << "Total is $" << total << endl;
-
+	outputFile << "Subtotal: $" << subtotal << endl;
+	outputFile << "Tax: $" << tax << endl;
+	outputFile << "Total: $" << total << endl;
 	outputFile.close();
-
 	cout << "Your bill has been saved to " << fileName << endl;
-
 }
